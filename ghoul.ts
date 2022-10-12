@@ -33,12 +33,7 @@ namespace Ghoul{
         tellEveryone(){
             this.#sayComplete();
         }
-    }
-
-    class Koukagune extends Ghoul{
-        constructor(readonly name: name, public age: age, public kagune: kagune, public dangerous: dangerous){
-            super(name, age, kagune, dangerous);
-        }
+        
         get GhoulName(){
             return this.name;
         }
@@ -60,6 +55,15 @@ namespace Ghoul{
         }
         get GhoulDangerous(): dangerous{
             return this.dangerous;
+        }
+    }
+
+    class Koukagune extends Ghoul{
+        constructor(readonly name: name, public age: age, public kagune: kagune, public dangerous: dangerous){
+            super(name, age, kagune, dangerous);
+        }
+        About(){
+            console.log("It's koukagune");
         }
     }
 
